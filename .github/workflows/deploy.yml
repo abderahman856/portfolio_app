@@ -31,7 +31,7 @@ jobs:
       - name: Build and push
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: portfolio
+          ECR_REPOSITORY: portfolio-app-repo
           IMAGE_TAG: ${{ steps.vars.outputs.sha_short }}
         run: |
           # Notice the "./app" at the end - this tells it where your code is!
