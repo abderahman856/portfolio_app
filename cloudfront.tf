@@ -1,6 +1,6 @@
 resource "aws_cloudfront_distribution" "portfolio_dist" {
   origin {
-    domain_name = aws_lb.portfolio_alb.dns_name # This points to your current link
+    domain_name = module.alb.alb_dns_name
     origin_id   = "PortfolioALB"
 
     custom_origin_config {
