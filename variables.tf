@@ -5,3 +5,9 @@ variable "aws_region" {
 variable "project_name" {
   default = "portfolio-app"
 }
+
+variable "container_image" {
+  description = "The Docker image tag to deploy"
+  type        = string
+  default     = "latest"
+}

@@ -25,6 +25,7 @@ module "alb" {
 
 module "ecs" {
   source                = "./modules/ecs"
+  container_image = var.container_image
   project_name          = var.project_name
   vpc_id                = module.networking.vpc_id
   subnets               = module.networking.public_subnets
