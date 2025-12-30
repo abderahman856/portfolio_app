@@ -23,5 +23,15 @@ Live URL:
 
 ---
 
+
 ## 🏗 Architecture Diagram
 
+```mermaid
+graph TD
+    User((User)) -->|HTTPS| ALB[Application Load Balancer]
+    ALB -->|Forward| ECS[ECS Fargate Service]
+    ECS -->|Runs| Docker[Dockerized React App]
+    
+    GitHub[GitHub Actions] -->|Build & Push| ECR[Amazon ECR]
+    GitHub -->|Terraform Apply| AWS[AWS Cloud Resources]
+    ECR -->|Pull Image| ECS
