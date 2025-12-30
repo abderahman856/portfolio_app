@@ -19,10 +19,7 @@ It demonstrates the complete journey from **local development** to **fully autom
 - Domain: Route 53
 
 Live URL:  
-👉 **https://tm.your-domain.com**
-
-Health Check:  
-👉 **https://tm.your-domain.com/health**
+👉 http://portfolio-app-alb-357217689.us-east-1.elb.amazonaws.com/
 
 ---
 
